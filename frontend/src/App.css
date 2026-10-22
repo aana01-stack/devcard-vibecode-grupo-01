@@ -416,10 +416,6 @@ ul li:hover {
   animation: card-entrar 0.6s ease;
 }
 
-/* ============================================
-   PATRONO CACHORRO - REALISTA
-   ============================================ */
-
 .patrono-cena {
   position: fixed;
   top: 0;
@@ -431,170 +427,11 @@ ul li:hover {
   z-index: 0;
 }
 
-.patrono-dog {
-  position: absolute;
-  width: 360px;
-  height: 300px;
-  animation: patrono-run 14s cubic-bezier(0.35, 0, 0.65, 1) infinite;
-  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.12)) drop-shadow(0 2px 4px rgba(0,0,0,0.08));
-}
-
-.patrono-dog svg {
-  width: 100%;
-  height: 100%;
-}
-
-@keyframes patrono-run {
-  0% {
-    transform: translate(0, 0) scaleX(1) rotate(0deg) scale(0.85);
-    top: 62%;
-    left: 5%;
+@media (prefers-reduced-motion: reduce) {
+  .magic-particle,
+  .card {
+    animation: none;
   }
-  6% {
-    transform: translate(8vw, -12vh) scaleX(1) rotate(3deg) scale(0.9);
-    top: 42%;
-    left: 15%;
-  }
-  12% {
-    transform: translate(20vw, -25vh) scaleX(1) rotate(-2deg) scale(0.95);
-    top: 25%;
-    left: 30%;
-  }
-  18% {
-    transform: translate(35vw, -38vh) scaleX(1) rotate(4deg) scale(1);
-    top: 10%;
-    left: 45%;
-  }
-  24% {
-    transform: translate(48vw, -28vh) scaleX(1) rotate(-3deg) scale(0.95);
-    top: 18%;
-    left: 58%;
-  }
-  30% {
-    transform: translate(58vw, -15vh) scaleX(1) rotate(2deg) scale(0.9);
-    top: 32%;
-    left: 68%;
-  }
-  36% {
-    transform: translate(65vw, -2vh) scaleX(1) rotate(-4deg) scale(0.88);
-    top: 50%;
-    left: 75%;
-  }
-  42% {
-    transform: translate(55vw, 5vh) scaleX(-1) rotate(3deg) scale(0.85);
-    top: 65%;
-    left: 65%;
-  }
-  48% {
-    transform: translate(40vw, -8vh) scaleX(-1) rotate(-2deg) scale(0.9);
-    top: 46%;
-    left: 50%;
-  }
-  54% {
-    transform: translate(25vw, -20vh) scaleX(-1) rotate(4deg) scale(0.95);
-    top: 28%;
-    left: 35%;
-  }
-  60% {
-    transform: translate(12vw, -32vh) scaleX(-1) rotate(-3deg) scale(1);
-    top: 14%;
-    left: 22%;
-  }
-  66% {
-    transform: translate(0, -36vh) scaleX(-1) rotate(2deg) scale(0.98);
-    top: 8%;
-    left: 8%;
-  }
-  72% {
-    transform: translate(-5vw, -24vh) scaleX(-1) rotate(-4deg) scale(0.92);
-    top: 22%;
-    left: 3%;
-  }
-  78% {
-    transform: translate(-3vw, -12vh) scaleX(-1) rotate(3deg) scale(0.88);
-    top: 40%;
-    left: 5%;
-  }
-  84% {
-    transform: translate(0, 0) scaleX(1) rotate(-2deg) scale(0.85);
-    top: 58%;
-    left: 10%;
-  }
-  90% {
-    transform: translate(5vw, -6vh) scaleX(1) rotate(3deg) scale(0.87);
-    top: 50%;
-    left: 18%;
-  }
-  95% {
-    transform: translate(2vw, -2vh) scaleX(1) rotate(-1deg) scale(0.86);
-    top: 55%;
-    left: 12%;
-  }
-  100% {
-    transform: translate(0, 0) scaleX(1) rotate(0deg) scale(0.85);
-    top: 62%;
-    left: 5%;
-  }
-}
-
-/* CABECA */
-.patrono-head {
-  transform-origin: 218px 80px;
-  animation: head-bob 1.6s ease-in-out infinite;
-}
-
-@keyframes head-bob {
-  0%, 100% { transform: rotate(0deg) translateY(0); }
-  30% { transform: rotate(4deg) translateY(-4px); }
-  60% { transform: rotate(-3deg) translateY(2px); }
-}
-
-/* ORELHAS */
-.patrono-ears {
-  animation: ears-run 0.8s ease-in-out infinite;
-}
-
-@keyframes ears-run {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(5px) rotate(3deg); }
-}
-
-/* CAUDA */
-.patrono-tail {
-  transform-origin: 278px 188px;
-  animation: tail-run 0.3s ease-in-out infinite alternate;
-}
-
-@keyframes tail-run {
-  0% { transform: rotate(-14deg); }
-  100% { transform: rotate(14deg); }
-}
-
-/* PATAS */
-.patrono-legs-front {
-  animation: legs-galope 0.45s ease-in-out infinite;
-}
-
-.patrono-legs-back {
-  animation: legs-galope 0.45s ease-in-out infinite;
-  animation-delay: 0.22s;
-}
-
-@keyframes legs-galope {
-  0%, 100% { transform: rotate(0deg) translateY(0); }
-  25% { transform: rotate(10deg) translateY(-8px); }
-  50% { transform: rotate(0deg) translateY(0); }
-  75% { transform: rotate(-10deg) translateY(5px); }
-}
-
-/* OLHOS */
-.patrono-eye {
-  animation: eye-run 3s ease-in-out infinite;
-}
-
-@keyframes eye-run {
-  0%, 88%, 100% { transform: scaleY(1); }
-  92% { transform: scaleY(0.08); }
 }
 
 /* ============================================
